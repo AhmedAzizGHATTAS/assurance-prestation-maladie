@@ -50,53 +50,6 @@
           </li>
         </ul>
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item dropdown d-none d-lg-block">
-            <a class="nav-link dropdown-bordered dropdown-toggle dropdown-toggle-split" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false"> Select Category </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
-              <a class="dropdown-item py-3" >
-                <p class="mb-0 font-weight-medium float-left">Select category</p>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item preview-item">
-                <div class="preview-item-content flex-grow py-2">
-                  <p class="preview-subject ellipsis font-weight-medium text-dark">Bootstrap Bundle </p>
-                  <p class="fw-light small-text mb-0">This is a Bundle featuring 16 unique dashboards</p>
-                </div>
-              </a>
-              <a class="dropdown-item preview-item">
-                <div class="preview-item-content flex-grow py-2">
-                  <p class="preview-subject ellipsis font-weight-medium text-dark">Angular Bundle</p>
-                  <p class="fw-light small-text mb-0">Everything you’ll ever need for your Angular projects</p>
-                </div>
-              </a>
-              <a class="dropdown-item preview-item">
-                <div class="preview-item-content flex-grow py-2">
-                  <p class="preview-subject ellipsis font-weight-medium text-dark">VUE Bundle</p>
-                  <p class="fw-light small-text mb-0">Bundle of 6 Premium Vue Admin Dashboard</p>
-                </div>
-              </a>
-              <a class="dropdown-item preview-item">
-                <div class="preview-item-content flex-grow py-2">
-                  <p class="preview-subject ellipsis font-weight-medium text-dark">React Bundle</p>
-                  <p class="fw-light small-text mb-0">Bundle of 8 Premium React Admin Dashboard</p>
-                </div>
-              </a>
-            </div>
-          </li>
-          <li class="nav-item d-none d-lg-block">
-            <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
-              <span class="input-group-addon input-group-prepend border-right">
-                <span class="icon-calendar input-group-text calendar-icon"></span>
-              </span>
-              <input type="text" class="form-control">
-            </div>
-          </li>
-          <li class="nav-item">
-            <form class="search-form" action="#">
-              <i class="icon-search"></i>
-              <input type="search" class="form-control" placeholder="Search Here" title="Search here">
-            </form>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
               <i class="icon-mail icon-lg"></i>
@@ -386,11 +339,11 @@
               <span style="color: #484848;" class="menu-title">Liste des prestations</span>
             </a>
           </li>
-          <li class="nav-item nav-category">pages</li>
+          <li class="nav-item nav-category">Paramètres</li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i style="color: #484848;" class="menu-icon mdi mdi-account-circle-outline"></i>
-              <span style="color: #484848;" class="menu-title">User Pages</span>
+              <span style="color: #484848;" class="menu-title">Favoris</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
@@ -411,7 +364,7 @@
                 <div class="d-sm-flex align-items-center justify-content-between border-bottom">
                   <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item">
-                      <a style="color:#fc043a;" class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Aperçu</a>
+                      <a style="color:#fc043a;" class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">nouvelle prise en charge</a>
                     </li>
                   </ul>
                 </div> 
@@ -424,7 +377,7 @@
                       </div>
                       <div style="margin-left: 5%;">
                         <p class="statistics-title">nom et prénom</p>
-                        <h3 class="rate-percentage">Brandon Washington</h3>
+                        <h3 class="rate-percentage">Ahmed Ghanem</h3>
                       </div>
                     </div>
                   </div>
@@ -528,15 +481,15 @@
                  </div>   
                  <div class="validerPopUp" id="validerPopUp">
                     <img src="./images/404-tick.png">
-                    <h2 style=" font-size: 38px;font-weight: 500;margin: 30px 0 10px;">merci !</h2>
+                    <h2 style=" font-size: 38px;font-weight: 500;margin: 30px 0 10px;">Validation !</h2>
                     <p>Une prise en charge a été ajouté </p>
-                    <a class="btn btn-success btn-lg text-white mb-0 me-0" href="./index.html">ok</a>
+                    <a class="btn btn-success btn-lg text-white mb-0 me-0" href="./listPrestation.html">Continuer</a>
                  </div> 
                  <div class="annulerPopUp" id="annulerPopUp">
-                    <img src="./images/404-tick.png">
-                    <h2 style=" font-size: 38px;font-weight: 500;margin: 30px 0 10px;">merci !</h2>
-                    <p>Une prise en charge a été ajouté </p>
-                    <button class="btn btn-success btn-lg text-white mb-0 me-0" onclick="nopopup()">ok</button>
+                    <img src="./images/Cross_red_circle.svg.png">
+                    <h2 style=" font-size: 38px;font-weight: 500;margin: 30px 0 10px;">Annulation</h2>
+                    <p>Une prise en charge a été annulé </p>
+                    <a class="btn btn-danger btn-lg text-white mb-0 me-0" href="./listPrestation.html">Continuer</a>
                  </div> 
                 </div>
                

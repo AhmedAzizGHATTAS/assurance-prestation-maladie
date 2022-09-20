@@ -11611,7 +11611,6 @@ textarea.is-invalid.tt-hint {
   border-radius: 0.1875rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-
 .validerPopUp{
   width: 400px;
   background-color: rgba(0, 0, 0, 0.4);
@@ -11679,11 +11678,10 @@ textarea.is-invalid.tt-hint {
   transform: translate(-50%,-50%) scale(1);
 }
 
-.annulerPopUp button{
+.annulerPopUp a{
   width: 100%;
   margin-top: 50px;
   padding: 10px 0;
-  background: #6fd649;
   color: #fff;
   border: 0;
   outline: none;
