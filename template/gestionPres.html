@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>admin list prestation </title>
+  <title>Gestion des prestataires </title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendors/feather/feather.css">
   <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
@@ -340,24 +340,24 @@
             </a>
            
             <a class="nav-link" href="GestionAdmin.html">
-              <i style="color: #484848;" class="mdi mdi-grid-large menu-icon" ></i>
+              <i style="color: #484848;" class="mdi mdi-account-box-outline menu-icon" ></i>
               <span style="color: #484848;" class="menu-title">Gestion des utilisateurs</span>
             </a>
             <a class="nav-link" href="gestionReclam.html">
-              <i style="color: #484848;" class="mdi mdi-grid-large menu-icon" ></i>
+              <i style="color: #484848;" class=" menu-icon mdi mdi-email-outline"></i>
               <span style="color: #484848;" class="menu-title">Gestion des reclamations </span>
             </a>
            
           </li>
           <li class="nav-item nav-category">Paramètrage</li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+            <a class="nav-link" href="tableRole.html">
               <i style="color: #484848;" class="menu-icon mdi mdi-format-list-bulleted"></i>
               <span style="color: #484848;" class="menu-title">Gestion des rôles</span>
               <!-- <i class="menu-arrow"></i> -->
             </a>
             <a class="nav-link" href="tablePrestation.html">
-              <i style="color: #484848;" class="menu-icon mdi mdi-account-circle-outline" ></i>
+              <i style="color: #484848;" class="menu-icon mdi mdi-table" ></i>
               <span style="color: #484848;" class="menu-title">Tableau de prestation</span>
             </a>
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
@@ -384,7 +384,7 @@
                 <div class="d-sm-flex align-items-center justify-content-between border-bottom">
                   <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item">
-                      <a style="color:#fc043a;" class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Liste des prestataires</a>
+                      <a style="color:#fc043a;" class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Gestion des prestataires</a>
                     </li>
                   </ul>
                 </div>
@@ -396,7 +396,7 @@
                             <input style=" border:none;border-bottom: 1px solid rgba(0, 0, 0, 0.25);"
                                 placeholder="Email" />
                             <input style=" border:none;border-bottom: 1px solid rgba(0, 0, 0, 0.25);"
-                                placeholder="Num de tel" />
+                                placeholder="Telephone" />
                             <input style=" border:none;border-bottom: 1px solid rgba(0, 0, 0, 0.25);"
                                 placeholder="Nom d'utilisateur" />
                     </div></div>
@@ -405,7 +405,7 @@
                       <input style=" border:none;border-bottom: 1px solid rgba(0, 0, 0, 0.25);margin-left: -10%;"
                       placeholder="Spécialités" />
                   <input style=" border:none;border-bottom: 1px solid rgba(0, 0, 0, 0.25);margin-left: -10%;"
-                      placeholder="Statu" />
+                      placeholder="Statut" />
                   <input style=" border:none;border-bottom: 1px solid rgba(0, 0, 0, 0.25);margin-left: -10%;"
                       placeholder="Date d'ajout" />
                   <button style="margin-left:-7%;" class="btnSearch"><i class="fa fa-search"></i></button>
@@ -413,64 +413,26 @@
                 
               </div>
               </div>
-              </div>
+              </div><div class="prestataireForm">
               <div class="addPrestataire" id="addPrestataire">
-                <div class="card-body">
-                  <h4 class="card-title" style=" color:#fc043a;margin: 4%; margin-bottom: 5%;">Ajouter un prestataire</h4>
-                 
+                
+                <div style="background-color: #F2F2F2; width: 1200px;height: 570px; margin-left: 350px;margin-top: 220px;border-radius: 16px;" class="card-body">
+                  <h3 class="card-title" style=" color:#fc043a;margin: 4%; margin-bottom: 5%;">Ajouter un prestataire</h3>
                   <form class="form-sample">
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;margin-left: -3%;">NOM</label>
+                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;">NOM</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <input type="text" class="form-control" style="margin-left: -4%;" />
                           </div>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;">PRÉNOM</label>
+                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;margin-left: -2%;">PRÉNOM</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;margin-left: -3%;">Email</label>
-                          <div class="col-sm-9">
-                            <input type="text" class="form-control" />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;">Telephone</label>
-                          <div class="col-sm-9">
-                            <input class="form-control" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;margin-left: -3%;">Nom d'utilisateur</label>
-                          <div class="col-sm-9">
-                            <input type="text" class="form-control" />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;">Date d'ajouter</label>
-                          <div class="col-sm-9">
-                            <input type="text" class="form-control" placeholder="dd/mm/yyyy" />
+                            <input type="text" class="form-control" style="margin-left: -4%;" />
                           </div>
                         </div>
                       </div>
@@ -478,9 +440,47 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;margin-left: -3%;">Spécialité</label>
+                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;">Email</label>
                           <div class="col-sm-9">
-                            <select class="form-control">
+                            <input type="text" class="form-control" style="margin-left: -4%;" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;margin-left: -2%;">Telephone</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" style="margin-left: -4%;" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;">Nom d'utilisateur</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" style="margin-left: -4%;" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;margin-left: -2%;">Date d'ajout</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" placeholder="dd/mm/yyyy" style="margin-left: -4%;"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;">Spécialité</label>
+                          <div class="col-sm-9">
+                            <select class="form-control" style="margin-left: -4%;">
                               <option>Spécialité</option>
                               <option>Spécialité</option>
                               <option>Spécialité</option>
@@ -491,9 +491,9 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;">Statut</label>
+                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;margin-left: -2%;">Statut</label>
                           <div class="col-sm-9">
-                            <select class="form-control">
+                            <select class="form-control" style="margin-left: -4%;">
                               <option>Active</option>
                               <option>Non active</option>
                             </select>
@@ -501,9 +501,10 @@
                         </div>
                       </div>
                     </div>
-                    <button class="btn btn-danger btn-lg text-white mb-0 me-0" style="margin-top: 2%;width: 30%;">ajoutée</button>
+                    <button class="btn btn-danger btn-lg text-white mb-0 me-0" style="margin-top: 2%;width: 30%;">Ajouter</button>
                   </form>
                 </div>
+              </div>
               </div>
               <div class="table-responsive  mt-1">
                 <div style="flex-direction:row ; display: flex; margin-top: 2%;">
@@ -520,12 +521,13 @@
                             <th style="color:#fc043a">Nom d'utilisateur</th>
                             <th style="color:#fc043a">Spécialités</th>
                             <th style="color:#fc043a">Statut</th>
+                            <th style="color:#fc043a">Date d'ajout</th>
+                            <th style="color:#fc043a">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-
-                            <td>
+                           <td>
 
                              <a style=" color: black; font-style: normal;
                              font-weight: 600;
@@ -533,9 +535,7 @@
                              line-height: 18px;
                              line-height: 1;
                              text-decoration: none;"
-                              href="./detailprestation.html">bob bob</a>
-
-            
+                              href="./detailprestation.html">bob bob</a>   
         </td>
         <td>
             <h6>bobbob@gmail.com</h6>
@@ -552,6 +552,12 @@
         </td>
         <td>
             <h6>Non active</h6>
+        </td>
+        <td>
+            <h6>20/04/2022</h6>
+        </td>
+        <td>
+          <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
         </td>
         </tr>
         <tr>
@@ -582,6 +588,12 @@
 <td>
     <h6>Non active</h6>
 </td>
+<td>
+  <h6>20/04/2022</h6>
+</td>
+<td>
+  <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
+</td>
 </tr>
 <tr>
     <td>
@@ -609,6 +621,12 @@
 </td>
 <td>
 <h6>Non active</h6>
+</td>
+<td>
+  <h6>20/04/2022</h6>
+</td>
+<td>
+  <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
 </td>
 </tr>
 <tr>
@@ -640,6 +658,12 @@
 </td>
 <td>
     <h6>Active</h6>
+</td>
+<td>
+  <h6>20/04/2022</h6>
+</td>
+<td>
+  <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
 </td>
 </tr>
 <tr>
@@ -670,6 +694,12 @@
 <td>
     <h6>Active</h6>
 </td>
+<td>
+  <h6>20/04/2022</h6>
+</td>
+<td>
+  <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
+</td>
 </tr>
 <tr>
 <td>
@@ -701,32 +731,11 @@
 <td>
     <h6>Active</h6>
 </td>
-</tr>
-<tr>
 <td>
-    <a style=" color: black; font-style: normal;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 18px;
-    line-height: 1;
-    text-decoration: none;"
-     href="./detailprestation.html">bob bob</a>
-
+  <h6>20/04/2022</h6>
 </td>
 <td>
-    <h6>bobbob@gmail.com</h6>
-</td>
-<td>
-  <h6>98457321</h6>
-</td>
-<td>
-  <h6>bob</h6>
-</td>
-<td>
-  <h6>Laboratoire</h6>
-</td>
-<td>
-    <h6>Active</h6>
+  <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
 </td>
 </tr>
 <tr>
@@ -755,6 +764,12 @@
 </td>
 <td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
     <h6>Active</h6>
+</td>
+<td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
+  <h6>20/04/2022</h6>
+</td>
+<td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)"> 
+  <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
 </td>
 </tr>
 </tbody>

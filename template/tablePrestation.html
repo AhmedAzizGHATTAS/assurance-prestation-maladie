@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title> Gestion des prestataires </title>
+  <title> Tableau de prestation </title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendors/feather/feather.css">
   <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
@@ -330,7 +330,7 @@
               <i style="color: #484848;" class="menu-icon mdi mdi-chart-line"></i>
               <span style="color: #484848;" class="menu-title">Statistiques</span>
             </a>
-            <a class="nav-link" href="adminListPrestation.html">
+             <a class="nav-link" href="adminListPrestation.html">
                 <i style="color: #484848;" class=" menu-icon mdi mdi-card-text-outline"></i>
                 <span style="color: #484848;" class="menu-title">Liste des prestations</span>
               </a>
@@ -340,25 +340,24 @@
             </a>
            
             <a class="nav-link" href="GestionAdmin.html">
-              <i style="color: #484848;" class="mdi mdi-grid-large menu-icon" ></i>
+              <i style="color: #484848;" class="mdi mdi-account-box-outline menu-icon" ></i>
               <span style="color: #484848;" class="menu-title">Gestion des utilisateurs</span>
             </a>
             <a class="nav-link" href="gestionReclam.html">
-              <i style="color: #484848;" class="mdi mdi-grid-large menu-icon" ></i>
+              <i style="color: #484848;" class=" menu-icon mdi mdi-email-outline" ></i>
               <span style="color: #484848;" class="menu-title">Gestion des reclamations </span>
             </a>
           </li>
           <li class="nav-item nav-category">Paramètrage</li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+            <a class="nav-link" href="tableRole.html">
               <i style="color: #484848;" class="menu-icon mdi mdi-format-list-bulleted"></i>
               <span style="color: #484848;" class="menu-title">Gestion des rôles</span>
               <!-- <i class="menu-arrow"></i> -->
             </a>
-            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i style="color: #fc043a;" class="menu-icon mdi mdi-account-circle-outline"></i>
+            <a class="nav-link" href="tablePrestation.html">
+              <i style="color: #fc043a;" class="menu-icon mdi mdi-table" ></i>
               <span style="color: #fc043a;" class="menu-title">Tableau de prestation</span>
-              <!-- <i class="menu-arrow"></i> -->
             </a>
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i style="color: #484848;" class="menu-icon mdi mdi-account-circle-outline"></i>
@@ -375,16 +374,15 @@
         </ul>
       </nav>
       <!-- partial -->
-      
       <div class="main-panel">
-        <div style="background-color: white ;" class="content-wrapper">
+        <div style="background-color: white ; margin-left: -2%;" class="content-wrapper">
           <div class="row">
             <div class="col-sm-12">
               <div class="home-tab">
                 <div class="d-sm-flex align-items-center justify-content-between border-bottom">
                   <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item">
-                      <a style="color:#fc043a;" class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Gestion des prestataires</a>
+                      <a style="color:#fc043a;" class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Tableau de prestation</a>
                     </li>
                   </ul>
                 </div>
@@ -425,26 +423,19 @@
           <button style="font-size:  22px;margin-left: 1.3%;color:#fc043a;border: none;" class="mdi mdi-window-close"></button>
         </td>
         </tr>
-        <tr>
-            
+        <tr>  
 <td>
     <h6>Laboratoire</h6>
-
 </td>
 <td>
     <h6>Radio</h6>
-
 </td>
 <td >
   <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
   <button style="font-size:  22px;margin-left: 1.3%;color:#fc043a;border: none;" class="mdi mdi-window-close"></button>
 </td>
 </tr>
-
-
 <tr>
-
-
 <td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
     <h6>Laboratoire</h6>
 </td>
@@ -455,14 +446,11 @@
   <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
   <button style="font-size:  22px;margin-left: 1.3%;color:#fc043a;border: none;" class="mdi mdi-window-close"></button>
 </td>
-
 </tr>
 </tbody>
 </table>
 </div>
-              </div>
-             
-               
+ </div>     
         <!-- partial -->
       </div>
       <!-- main-panel ends -->
