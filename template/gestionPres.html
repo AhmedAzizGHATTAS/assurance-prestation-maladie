@@ -405,7 +405,7 @@
                       <input style=" border:none;border-bottom: 1px solid rgba(0, 0, 0, 0.25);margin-left: -10%;"
                       placeholder="Spécialités" />
                   <input style=" border:none;border-bottom: 1px solid rgba(0, 0, 0, 0.25);margin-left: -10%;"
-                      placeholder="Status" />
+                      placeholder="Statu" />
                   <input style=" border:none;border-bottom: 1px solid rgba(0, 0, 0, 0.25);margin-left: -10%;"
                       placeholder="Date d'ajout" />
                   <button style="margin-left:-7%;" class="btnSearch"><i class="fa fa-search"></i></button>
@@ -414,21 +414,112 @@
               </div>
               </div>
               </div>
-             
-              <div class="table-responsive  mt-1">
-                <div style="flex-direction:row ; display: flex;">
-                <h2  class="card-title card-title-dash">Liste des prestataires</h2>
-                <button style="margin-left: 75%;"  class="btnSearch"><i class="fa fa-plus"></i></button>
+              <div class="addPrestataire" id="addPrestataire">
+                <div class="card-body">
+                  <h4 class="card-title" style=" color:#fc043a;margin: 4%; margin-bottom: 5%;">Ajouter un prestataire</h4>
+                 
+                  <form class="form-sample">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;margin-left: -3%;">NOM</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;">PRÉNOM</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;margin-left: -3%;">Email</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;">Telephone</label>
+                          <div class="col-sm-9">
+                            <input class="form-control" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;margin-left: -3%;">Nom d'utilisateur</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;">Date d'ajouter</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" placeholder="dd/mm/yyyy" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;margin-left: -3%;">Spécialité</label>
+                          <div class="col-sm-9">
+                            <select class="form-control">
+                              <option>Spécialité</option>
+                              <option>Spécialité</option>
+                              <option>Spécialité</option>
+                              <option>Spécialité</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label" style=" color:#fc043a;margin-top: -2%;">Statut</label>
+                          <div class="col-sm-9">
+                            <select class="form-control">
+                              <option>Active</option>
+                              <option>Non active</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn btn-danger btn-lg text-white mb-0 me-0" style="margin-top: 2%;width: 30%;">ajoutée</button>
+                  </form>
+                </div>
               </div>
+              <div class="table-responsive  mt-1">
+                <div style="flex-direction:row ; display: flex; margin-top: 2%;">
+                <h2  class="card-title card-title-dash">Liste des prestataires</h2>
+                <button style="margin-left: 75%; margin-bottom: 2%;"  class="btnSearch" onclick="openAddPopUp()"><i class="fa fa-plus" ></i></button>
+              </div>
+             
                 <table class="table select-table">
                     <thead>
                         <tr>
                             <th style="color:#fc043a">Nom et Prénom</th>
                             <th style="color:#fc043a">Email</th>
-                            <th style="color:#fc043a">Num de tel</th>
+                            <th style="color:#fc043a">Telephone</th>
                             <th style="color:#fc043a">Nom d'utilisateur</th>
                             <th style="color:#fc043a">Spécialités</th>
-                            <th style="color:#fc043a">Status</th>
+                            <th style="color:#fc043a">Statut</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -442,26 +533,25 @@
                              line-height: 18px;
                              line-height: 1;
                              text-decoration: none;"
-                              href="./detailprestation.html">56491</a>
+                              href="./detailprestation.html">bob bob</a>
 
-            </div>
-        </div>
+            
         </td>
         <td>
-            <h6>bob bob</h6>
+            <h6>bobbob@gmail.com</h6>
         </td>
         <td>
-            <h6>15/08/2022</h6>
+            <h6>98457321</h6>
         </td>
         <td>
-            <h6>300</h6>
+            <h6>bob</h6>
 
         </td>
         <td>
-            <h6>100</h6>
+            <h6>Laboratoire</h6>
         </td>
         <td>
-            <div class="badge badge-opacity-danger">Non reglée</div>
+            <h6>Non active</h6>
         </td>
         </tr>
         <tr>
@@ -472,26 +562,25 @@
                 line-height: 18px;
                 line-height: 1;
                 text-decoration: none;"
-                 href="./detailprestation.html">56491</a>
-    </div>
-</div>
+                 href="./detailprestation.html">bob bob</a>
+   
 </td>
 <td>
-    <h6>bob bob</h6>
+    <h6>bobbob@gmail.com</h6>
 </td>
 <td>
-    <h6>15/08/2022</h6>
+    <h6>98457321</h6>
 
 </td>
 <td>
-    <h6>300</h6>
+    <h6>bob</h6>
 
 </td>
 <td>
-    <h6>80</h6>
+    <h6>Laboratoire</h6>
 </td>
 <td>
-    <div class="badge badge-opacity-danger">Non reglée</div>
+    <h6>Non active</h6>
 </td>
 </tr>
 <tr>
@@ -502,25 +591,24 @@
         line-height: 18px;
         line-height: 1;
         text-decoration: none;"
-         href="./detailprestation.html">56491</a>
-</div>
-</div>
-</td>
-<td>
-    <h6>bob bob</h6>
-</td>
-<td>
-<h6>15/08/2022</h6>
-</td>
-<td>
-<h6>300</h6>
+         href="./detailprestation.html">bob bob</a>
 
 </td>
 <td>
-<h6>120</h6>
+    <h6>bobbob@gmail.com</h6>
 </td>
 <td>
-<div class="badge badge-opacity-success">Reglée</div>
+<h6>98457321</h6>
+</td>
+<td>
+<h6>bob</h6>
+
+</td>
+<td>
+<h6>Laboratoire</h6>
+</td>
+<td>
+<h6>Non active</h6>
 </td>
 </tr>
 <tr>
@@ -531,28 +619,27 @@
     line-height: 18px;
     line-height: 1;
     text-decoration: none;"
-     href="./detailprestation.html">56491</a>
+     href="./detailprestation.html">bob bob</a>
 
-    </div>
-    </div>
+    
 </td>
 <td>
-    <h6>bob bob</h6>
+    <h6>bobbob@gmail.com</h6>
 </td>
 <td>
-    <h6>14/08/2022</h6>
-
-</td>
-<td>
-    <h6>250</h6>
+    <h6>98457321</h6>
 
 </td>
 <td>
-    <h6>60</h6>
+    <h6>bob</h6>
 
 </td>
 <td>
-    <div class="badge badge-opacity-danger">Non reglée</div>
+    <h6>Laboratoire</h6>
+
+</td>
+<td>
+    <h6>Active</h6>
 </td>
 </tr>
 <tr>
@@ -563,26 +650,25 @@
     line-height: 18px;
     line-height: 1;
     text-decoration: none;"
-     href="./detailprestation.html">56491</a>
-    </div>
-    </div>
+     href="./detailprestation.html">bob bob</a>
+   
 </td>
 <td>
-    <h6>bob bob</h6>
+    <h6>bobbob@gmail.com</h6>
 </td>
 <td>
-    <h6>13/08/2022</h6>
+    <h6>98457321</h6>
 </td>
 <td>
-    <h6>7000</h6>
+    <h6>bob</h6>
 
 </td>
 <td>
-    <h6>2000</h6>
+    <h6>Laboratoire</h6>
 
 </td>
 <td>
-    <div class="badge badge-opacity-success">Reglée</div>
+    <h6>Active</h6>
 </td>
 </tr>
 <tr>
@@ -593,28 +679,27 @@
     line-height: 18px;
     line-height: 1;
     text-decoration: none;"
-     href="./detailprestation.html">56491</a>
+     href="./detailprestation.html">bob bob</a>
 
-    </div>
-    </div>
+    
 </td>
 <td>
-    <h6>bob bob</h6>
+    <h6>bobbob@gmail.com</h6>
 </td>
 <td>
-    <h6>12/08/2022</h6>
-
-</td>
-<td>
-    <h6>200</h6>
+    <h6>98457321</h6>
 
 </td>
 <td>
-    <h6>70</h6>
+    <h6>bob</h6>
 
 </td>
 <td>
-    <div class="badge badge-opacity-success">Reglée</div>
+    <h6>Laboratoire</h6>
+
+</td>
+<td>
+    <h6>Active</h6>
 </td>
 </tr>
 <tr>
@@ -625,24 +710,23 @@
     line-height: 18px;
     line-height: 1;
     text-decoration: none;"
-     href="./detailprestation.html">56491</a>
-</div>
-</div>
+     href="./detailprestation.html">bob bob</a>
+
 </td>
 <td>
-    <h6>bob bob</h6>
+    <h6>bobbob@gmail.com</h6>
 </td>
 <td>
-  <h6>11/08/2022</h6>
+  <h6>98457321</h6>
 </td>
 <td>
-  <h6>250</h6>
+  <h6>bob</h6>
 </td>
 <td>
-  <h6>100</h6>
+  <h6>Laboratoire</h6>
 </td>
 <td>
-    <div class="badge badge-opacity-danger">Non reglée</div>
+    <h6>Active</h6>
 </td>
 </tr>
 <tr>
@@ -653,38 +737,30 @@
     line-height: 18px;
     line-height: 1;
     text-decoration: none;"
-     href="./detailprestation.html">56491</a>
+     href="./detailprestation.html">bob bob</a>
     </div>
     </div>
 </td>
 <td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
-    <h6>bob bob</h6>
+    <h6>bobbob@gmail.com</h6>
 </td>
 <td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
-    <h6>10/08/2022</h6>
+    <h6>98457321</h6>
 </td>
 <td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
-    <h6>300</h6>
+    <h6>bob</h6>
 </td>
 <td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
-    <h6>80</h6>
+    <h6>Laboratoire</h6>
 </td>
 <td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
-    <div class="badge badge-opacity-success">Reglée</div>
+    <h6>Active</h6>
 </td>
 </tr>
 </tbody>
 </table>
 </div>
-        <!-- partial -->
-      </div>
-      <!-- main-panel ends -->
-    </div>
-    <!-- page-body-wrapper ends -->
-  </div>
-  <!-- container-scroller -->
-
-  <!-- plugins:js -->
+</div>
   <script src="vendors/js/vendor.bundle.base.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page -->
@@ -705,6 +781,13 @@
   <script src="js/dashboard.js"></script>
   <script src="js/Chart.roundedBarCharts.js"></script>
   <!-- End custom js for this page-->
+  <!-- pop up -->
+  <script>
+    let addPopUp = document.getElementById("addPrestataire")
+    function openAddPopUp(){
+      addPopUp.classList.add("open-addPrestataire")
+    }
+  </script>
 </body>
 
 </html>

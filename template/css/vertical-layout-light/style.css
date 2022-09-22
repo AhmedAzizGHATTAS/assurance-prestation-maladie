@@ -11611,6 +11611,26 @@ textarea.is-invalid.tt-hint {
   border-radius: 0.1875rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+.addPrestataire{
+  width: 64%;
+  height: 55%;
+  background-color: rgb(187, 187, 187,0.96);
+  border-radius: 15px;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  transform: translate(40%,-5%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #fff;
+  visibility: hidden;
+  transition: transform 0.4s,top 0.4s;
+}
+.open-addPrestataire{
+  visibility: visible;
+  top: 50%;
+  transform: translate(-7%,-50%) scale(1);
+}
 .validerPopUp{
   width: 400px;
   background-color: rgba(0, 0, 0, 0.4);
