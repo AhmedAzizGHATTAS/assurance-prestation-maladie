@@ -335,10 +335,9 @@
                 <span style="color: #484848;" class="menu-title">Liste des prestations</span>
               </a>
             <a class="nav-link" href="gestionPres.html">
-              <i style="color: #484848;" class="mdi mdi-grid-large menu-icon" ></i>
+              <i style="color: #484848;" class="mdi mdi-account-multiple menu-icon" ></i>
               <span style="color: #484848;" class="menu-title">Gestion des prestataires</span>
             </a>
-           
             <a class="nav-link" href="GestionAdmin.html">
               <i style="color: #484848;" class="mdi mdi-account-box-outline menu-icon" ></i>
               <span style="color: #484848;" class="menu-title">Gestion des utilisateurs</span>
@@ -360,16 +359,15 @@
               <span style="color: #fc043a;" class="menu-title">Tableau de prestation</span>
             </a>
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i style="color: #484848;" class="menu-icon mdi mdi-account-circle-outline"></i>
+              <i style="color: #484848;" class="menu-icon mdi mdi-pencil-box-outline"></i>
               <span style="color: #484848;" class="menu-title">Spécialité et actes </span>
               <!-- <i class="menu-arrow"></i> -->
             </a>
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i style="color: #484848;" class="menu-icon mdi mdi-account-circle-outline"></i>
+              <i style="color: #484848;" class="menu-icon mdi mdi-heart-outline"></i>
               <span style="color: #484848;" class="menu-title">Favoris</span>
               <!-- <i class="menu-arrow"></i> -->
             </a>
-           
           </li>
         </ul>
       </nav>
@@ -392,7 +390,7 @@
                           <input style=" border:none;border-bottom: 1px solid rgba(0, 0, 0, 0.25);"
                               placeholder="Spécialité" />
                           <input style=" border:none;border-bottom: 1px solid rgba(0, 0, 0, 0.25);"
-                              placeholder="Date" />                                                 
+                              placeholder="Préstation" />                                                 
                           <button style="margin-left:-7%;" class="btnSearch"><i class="fa fa-search"></i></button>
                   </div>
               </div>
@@ -409,48 +407,11 @@
                             <th style="color:#fc043a">Modifier</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-        <td>
-            <h6>Laboratoire</h6>
-        </td>
-        <td>
-            <h6>Analyse</h6>
-
-        </td>
-        <td >
-          <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
-          <button style="font-size:  22px;margin-left: 1.3%;color:#fc043a;border: none;" class="mdi mdi-window-close"></button>
-        </td>
-        </tr>
-        <tr>  
-<td>
-    <h6>Laboratoire</h6>
-</td>
-<td>
-    <h6>Radio</h6>
-</td>
-<td >
-  <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
-  <button style="font-size:  22px;margin-left: 1.3%;color:#fc043a;border: none;" class="mdi mdi-window-close"></button>
-</td>
-</tr>
-<tr>
-<td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
-    <h6>Laboratoire</h6>
-</td>
-<td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
-    <h6>Scanner</h6>
-</td>
-<td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
-  <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
-  <button style="font-size:  22px;margin-left: 1.3%;color:#fc043a;border: none;" class="mdi mdi-window-close"></button>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
- </div>     
+                    <tbody id="prestationTable">
+                     </tbody>
+                     </table>
+                     </div>
+                      </div>     
         <!-- partial -->
       </div>
       <!-- main-panel ends -->
@@ -458,7 +419,57 @@
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
+  <script >
+  const prestationData = [
+    {
+        spécialité:"Consultation et Visite",
+        // categorieDeSoins:"1-Bulletins de sois CNAM:2-Bulletins de soins At-Takafulia: Généraliste,Dentiste(C1,V1)"
+        categorieDeSoins:"Généraliste, Dentiste(C1,V1)"
+    },
+    {
+        spécialité:"Pharmacie",
+        // categorieDeSoins:"1-Bulletins de sois CNAM:\n 2-Bulletins de soins At-Takafulia: \n sont exclus: Les produits d'allaitement infantile"
+        categorieDeSoins:"Les produits d'allaitement infantile"
+    },
+    {
+        spécialité:"Analyses",
+        categorieDeSoins:"B"
+    },
+    {
+        spécialité:"Radiologie",
+        categorieDeSoins:"R"
+    },
+    {
+        spécialité:"Traitements speciaux",
+        categorieDeSoins:"KE"
+    },
+]
 
+
+ window.onload = ()=>{
+  tableprestationData(prestationData)
+ }
+
+    function tableprestationData(prestationData){
+      const tablebody = document.getElementById("prestationTable")
+      let dataHtml = ""
+      for(let pres of prestationData ){
+        dataHtml+=`<tr>
+<td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15);">
+    <h6 style="white-space: pre-line;">${pres.spécialité}</h6>
+</td>
+<td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
+    <h6>${pres.categorieDeSoins}</h6>
+</td>
+<td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
+  <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
+  <button style="font-size:  22px;margin-left: 1.3%;color:#fc043a;border: none;" class="mdi mdi-window-close"></button>
+</td>
+</tr>`
+      }
+      tablebody.innerHTML = dataHtml
+    }
+  </script>
   <!-- plugins:js -->
   <script src="vendors/js/vendor.bundle.base.js"></script>
   <!-- endinject -->

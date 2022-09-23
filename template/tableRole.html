@@ -25,7 +25,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
       <div style="background-color: white;" class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
@@ -335,10 +334,9 @@
                 <span style="color: #484848;" class="menu-title">Liste des prestations</span>
               </a>
             <a class="nav-link" href="gestionPres.html">
-              <i style="color: #484848;" class="mdi mdi-grid-large menu-icon" ></i>
+              <i style="color: #484848;" class="mdi mdi-account-multiple menu-icon" ></i>
               <span style="color: #484848;" class="menu-title">Gestion des prestataires</span>
             </a>
-           
             <a class="nav-link" href="GestionAdmin.html">
               <i style="color: #484848;" class="mdi mdi-account-box-outline menu-icon" ></i>
               <span style="color: #484848;" class="menu-title">Gestion des utilisateurs</span>
@@ -360,16 +358,15 @@
               <span style="color: #484848;" class="menu-title">Tableau de prestation</span>
             </a>
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i style="color: #484848;" class="menu-icon mdi mdi-account-circle-outline"></i>
+              <i style="color: #484848;" class="menu-icon mdi mdi-pencil-box-outline"></i>
               <span style="color: #484848;" class="menu-title">Spécialité et actes </span>
               <!-- <i class="menu-arrow"></i> -->
             </a>
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i style="color: #484848;" class="menu-icon mdi mdi-account-circle-outline"></i>
+              <i style="color: #484848;" class="menu-icon mdi mdi-heart-outline"></i>
               <span style="color: #484848;" class="menu-title">Favoris</span>
               <!-- <i class="menu-arrow"></i> -->
             </a>
-           
           </li>
         </ul>
       </nav>
@@ -392,7 +389,7 @@
                           <input style=" border:none;border-bottom: 1px solid rgba(0, 0, 0, 0.25);"
                               placeholder="Rôles" />
                           <input style=" border:none;border-bottom: 1px solid rgba(0, 0, 0, 0.25);"
-                              placeholder="Date" />                                                 
+                              placeholder="Préstation" />                                                 
                           <button style="margin-left:-7%;" class="btnSearch"><i class="fa fa-search"></i></button>
                   </div>
               </div>
@@ -409,44 +406,8 @@
                             <th style="color:#fc043a">Modifier</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-        <td>
-            <h6>Laboratoire</h6>
-        </td>
-        <td>
-            <h6>Analyse</h6>
-
-        </td>
-        <td >
-          <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
-          <button style="font-size:  22px;margin-left: 1.3%;color:#fc043a;border: none;" class="mdi mdi-window-close"></button>
-        </td>
-        </tr>
-        <tr>  
-<td>
-    <h6>Laboratoire</h6>
-</td>
-<td>
-    <h6>Radio</h6>
-</td>
-<td >
-  <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
-  <button style="font-size:  22px;margin-left: 1.3%;color:#fc043a;border: none;" class="mdi mdi-window-close"></button>
-</td>
-</tr>
-<tr>
-<td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
-    <h6>Laboratoire</h6>
-</td>
-<td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
-    <h6>Scanner</h6>
-</td>
-<td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
-  <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
-  <button style="font-size:  22px;margin-left: 1.3%;color:#fc043a;border: none;" class="mdi mdi-window-close"></button>
-</td>
-</tr>
+                    <tbody id="roleTable">
+                       
 </tbody>
 </table>
 </div>
@@ -457,8 +418,48 @@
     </div>
     <!-- page-body-wrapper ends -->
   </div>
+  <script >
+    const roleData = [
+      {
+          role:"admin",
+          pres:"Analyse"
+      },
+      {
+          role:"gestionnaire",
+          pres:"Scanner"
+      },
+      {
+          role:"super admin",
+          pres:"Radio"
+      }
+  ]
+  
+  
+   window.onload = ()=>{
+    tableRoleData(roleData)
+   }
+  
+      function tableRoleData(roleData){
+        const tablebody = document.getElementById("roleTable")
+        let dataHtml = ""
+        for(let role of roleData ){
+          dataHtml+=`<tr>
+  <td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
+      <h6>${role.role}</h6>
+  </td>
+  <td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
+      <h6>${role.pres}</h6>
+  </td>
+  <td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
+    <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
+    <button style="font-size:  22px;margin-left: 1.3%;color:#fc043a;border: none;" class="mdi mdi-window-close"></button>
+  </td>
+  </tr>`
+        }
+        tablebody.innerHTML = dataHtml
+      }
+    </script>
   <!-- container-scroller -->
-
   <!-- plugins:js -->
   <script src="vendors/js/vendor.bundle.base.js"></script>
   <!-- endinject -->
@@ -466,7 +467,6 @@
   <script src="vendors/chart.js/Chart.min.js"></script>
   <script src="vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
   <script src="vendors/progressbar.js/progressbar.min.js"></script>
-
   <!-- End plugin js for this page -->
   <!-- inject:js -->
   <script src="js/off-canvas.js"></script>
