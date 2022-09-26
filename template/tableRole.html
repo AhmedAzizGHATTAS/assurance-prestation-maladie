@@ -390,7 +390,7 @@
                               placeholder="Rôles" />
                           <input style=" border:none;border-bottom: 1px solid rgba(0, 0, 0, 0.25);"
                               placeholder="Préstation" />                                                 
-                          <button style="margin-left:-7%;" class="btnSearch"><i class="fa fa-search"></i></button>
+                          <button style="margin-left:-7%; border-radius: 5px;" class="btnSearch"><i class="fa fa-search"></i></button>
                   </div>
               </div>
               </div>
@@ -401,6 +401,7 @@
                 <table class="table select-table">
                     <thead>
                         <tr>
+                            <th style="color:#fc043a">Nom d'utilisateur</th>
                             <th style="color:#fc043a">Rôles</th>
                             <th style="color:#fc043a">Préstation</th>
                             <th style="color:#fc043a">Modifier</th>
@@ -419,20 +420,23 @@
     <!-- page-body-wrapper ends -->
   </div>
   <script >
-    const roleData = [
-      {
-          role:"admin",
-          pres:"Analyse"
-      },
-      {
-          role:"gestionnaire",
-          pres:"Scanner"
-      },
-      {
-          role:"super admin",
-          pres:"Radio"
-      }
-  ]
+   const roleData = [
+    {
+        nomUt:"Ahmed Gh",
+        role:"admin",
+        pres:"Analyse"
+    },
+    {
+        nomUt:"Mohamed Tb",
+        role:"gestionnaire",
+        pres:"Scanner"
+    },
+    {
+        nomUt:"Adel D",
+        role:"super admin",
+        pres:"Radio"
+    }
+]
   
   
    window.onload = ()=>{
@@ -444,6 +448,9 @@
         let dataHtml = ""
         for(let role of roleData ){
           dataHtml+=`<tr>
+  <td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
+      <h6>${role.nomUt}</h6>
+  </td>
   <td style="border-bottom: 1px solid rgba(0, 0, 0, 0.15)">
       <h6>${role.role}</h6>
   </td>
