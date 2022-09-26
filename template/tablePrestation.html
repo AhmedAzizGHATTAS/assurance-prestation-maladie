@@ -755,30 +755,30 @@
         {
           spécialité: "Consultation et Visite",
           categorieDeSoins: "Généraliste,Dentiste (C1,C2)",
-          tRA: "100%",
-          pUA: "30,000",
-          mPA: "Plafond général",
+          t_R_A: "100%",
+          p_U_A: "30,000",
+          m_P_A: "Plafond général",
         },
         {
           spécialité: "Consultation et Visite",
           categorieDeSoins: "Spécialiste (C2,V2)",
-          tRA: "100%",
-          pUA: "30,000",
-          mPA: "Plafond général",
+          t_R_A: "100%",
+          p_U_A: "30,000",
+          m_P_A: "Plafond général",
         },
         {
           spécialité: "Consultation et Visite",
           categorieDeSoins: "professeur(C3,V3)",
-          tRA: "100%",
-          pUA: "30,000",
-          mPA: "Plafond général",
+          t_R_A: "100%",
+          p_U_A: "30,000",
+          m_P_A: "Plafond général",
         },
         {
           spécialité: "Consultation et Visite",
           categorieDeSoins: "Sage femme",
-          tRA: "100%",
-          pUA: "30,000",
-          mPA: "Plafond général",
+          t_R_A: "100%",
+          p_U_A: "30,000",
+          m_P_A: "Plafond général",
         },
       ];
 
@@ -791,26 +791,26 @@
         let dataHtml = "";
         for (let pres of prestationData) {
           dataHtml += `<tr>
-<td >
-    <h6 style="margin-left:5px;">${pres.spécialité}</h6>
-</td>
-<td >
-    <h6 style="margin-left:5px;">${pres.categorieDeSoins}</h6>
-</td>
-<td >
-    <h6 style="margin-left:5px;">${pres.tRA}</h6>
-</td>
-<td >
-    <h6 style="margin-left:5px;">${pres.pUA}</h6>
-</td>
-<td >
-    <h6 style="margin-left:5px;">${pres.mPA}</h6>
-</td>
-<td >
-  <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
-  <button style="font-size:  22px;margin-left: 1.3%;color:#fc043a;border: none;" class="mdi mdi-window-close"></button>
-</td>
-</tr>`;
+             <td >
+                 <h6 style="margin-left:5px;">${pres.spécialité}</h6>
+             </td>
+             <td >
+                 <h6 style="margin-left:5px;">${pres.categorieDeSoins}</h6>
+             </td>
+             <td >
+                 <h6 style="margin-left:5px;">${pres.t_R_A}</h6>
+             </td>
+             <td >
+                 <h6 style="margin-left:5px;">${pres.p_U_A}</h6>
+             </td>
+             <td >
+                 <h6 style="margin-left:5px;">${pres.m_P_A}</h6>
+             </td>
+             <td >
+               <button style="font-size:  22px; color: green; border: none; " class="mdi mdi mdi-pencil"></button>
+               <button style="font-size:  22px;margin-left: 1.3%;color:#fc043a;border: none;" class="mdi mdi-window-close"></button>
+             </td>
+             </tr>`;
         }
         tablebody.innerHTML = dataHtml;
       }
