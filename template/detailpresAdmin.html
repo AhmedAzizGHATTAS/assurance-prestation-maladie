@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>nouvelle prise en charge</title>
+    <title>Statistiques</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="vendors/feather/feather.css" />
     <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css" />
@@ -538,56 +538,100 @@
       <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
       <nav
-        style="
-          background-color: white;
-          border-right: 1px solid rgba(0, 0, 0, 0.25);
-        "
-        class="sidebar sidebar-offcanvas"
-        id="sidebar"
-      >
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="statistiques.html">
-              <i
-                style="color: #484848"
-                class="menu-icon mdi mdi-chart-line"
-              ></i>
-              <span style="color: #484848" class="menu-title"
-                >Statistiques</span
-              >
-            </a>
-            <a class="nav-link" href="priseEnCharge.html">
-              <i
-                style="color: #484848"
-                class="mdi mdi-grid-large menu-icon"
-              ></i>
-              <span style="color: #484848" class="menu-title"
-                >Prises en charge</span
-              >
-            </a>
-            <a class="nav-link" href="listPrestation.html">
-              <i
-                style="color: #484848"
-                class="menu-icon mdi mdi-card-text-outline"
-              ></i>
-              <span style="color: #484848" class="menu-title"
-                >Liste des préstations</span
-              >
-            </a>
-            <a class="nav-link" href="mesReclam.html">
-              <i
-                style="color: #484848"
-                class="menu-icon mdi mdi-email-open-outline"
-              ></i>
-              <span style="color: #484848" class="menu-title"
-                >Mes réclamations</span
-              >
-            </a>
-          </li>
-        </ul>
-      </nav>
+      style="
+        background-color: white;
+        border-right: 1px solid rgba(0, 0, 0, 0.25);
+        width: 270px;
+      "
+      class="sidebar sidebar-offcanvas"
+      id="sidebar"
+    >
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="adminStat.html">
+            <i
+              style="color: #484848"
+              class="menu-icon mdi mdi-chart-line"
+            ></i>
+            <span style="color: #484848" class="menu-title"
+              >Statistiques</span
+            >
+          </a>
+          <a class="nav-link" href="adminListPrestation.html">
+            <i
+              style="color: #484848"
+              class="menu-icon mdi mdi-card-text-outline"
+            ></i>
+            <span style="color: #484848" class="menu-title"
+              >Liste des préstations</span
+            >
+          </a>
+          <a class="nav-link" href="gestionPres.html">
+            <i
+              style="color: #484848"
+              class="mdi mdi-account-multiple menu-icon"
+            ></i>
+            <span style="color: #484848" class="menu-title"
+              >Gestion des préstataires</span
+            >
+          </a>
+          <a class="nav-link" href="GestionAdmin.html">
+            <i
+              style="color: #484848"
+              class="mdi mdi-account-box-outline menu-icon"
+            ></i>
+            <span style="color: #484848" class="menu-title"
+              >Gestion des utilisateurs</span
+            >
+          </a>
+          <a class="nav-link" href="gestionReclam.html">
+            <i
+              style="color: #484848"
+              class="menu-icon mdi mdi-email-outline"
+            ></i>
+            <span style="color: #484848" class="menu-title"
+              >Gestion des réclamations
+            </span>
+          </a>
+        </li>
+        <li class="nav-item nav-category">Paramètrage</li>
+        <li class="nav-item">
+          <a class="nav-link" href="tableRole.html">
+            <i
+              style="color: #484848"
+              class="menu-icon mdi mdi-format-list-bulleted"
+            ></i>
+            <span style="color: #484848" class="menu-title"
+              >Gestion des rôle</span
+            >
+            <!-- <i class="menu-arrow"></i> -->
+          </a>
+          <a class="nav-link" href="tablePrestation.html">
+            <i style="color: #484848" class="menu-icon mdi mdi-table"></i>
+            <span style="color: #484848" class="menu-title"
+              >Tableau de préstation</span
+            >
+          </a>
+          <a
+            class="nav-link"
+            data-bs-toggle="collapse"
+            href="#auth"
+            aria-expanded="false"
+            aria-controls="auth"
+          >
+            <i
+              style="color: #484848"
+              class="menu-icon mdi mdi-pencil-box-outline"
+            ></i>
+            <span style="color: #484848" class="menu-title"
+              >Spécialité et actes
+            </span>
+            <!-- <i class="menu-arrow"></i> -->
+          </a>
+        </li>
+      </ul>
+    </nav>
       <!-- partial -->
-
       <div class="main-panel">
         <div style="background-color: white" class="content-wrapper">
           <div class="row">
@@ -607,8 +651,8 @@
                         role="tab"
                         aria-controls="overview"
                         aria-selected="true"
-                        >nouvelle prise en charge</a
-                      >
+                        >Détail préstation
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -618,81 +662,28 @@
                       class="statistics-details d-flex align-items-center justify-content-start"
                     >
                       <div>
+                        <p class="statistics-title">Id préstation</p>
+                        <h3 class="rate-percentage">56491</h3>
+                      </div>
+                      <div style="margin-left: 5%">
                         <p class="statistics-title">Num adhérent</p>
                         <h3 class="rate-percentage">0001</h3>
                       </div>
                       <div style="margin-left: 5%">
                         <p class="statistics-title">Nom et prénom</p>
-                        <h3 class="rate-percentage">Ahmed Ghanem</h3>
+                        <h3 class="rate-percentage">Karim Ammar</h3>
+                      </div>
+                      <div style="margin-left: 5%">
+                        <p class="statistics-title">Date</p>
+                        <h3 class="rate-percentage">15/08/2022</h3>
+                      </div>
+                      <div style="margin-left: 5%">
+                        <p class="statistics-title">Etat</p>
+                        <h3 class="rate-percentage">Non reglée</h3>
                       </div>
                     </div>
                   </div>
                   <div style="margin-left: -14%">
-                    <div
-                      style="
-                        border-radius: 15px;
-                        border-top: 1px solid rgba(0, 0, 0, 0.25);
-                        height: 120px;
-                        width: 80%;
-                        margin-left: 11%;
-                      "
-                    >
-                      <div style="margin-left: 1.5%">
-                        <label
-                          style="
-                            color: #fc043a;
-                            font-size: medium;
-                            font-weight: bold;
-                          "
-                          class="col-sm-3 col-form-label"
-                          >Actes</label
-                        >
-                        <div style="width: 30%" class="col-sm-9">
-                          <select style="height: 30px" class="form-control">
-                            <option>Analyses</option>
-                            <option>Eléctroradiologie</option>
-                            <option>Endoscopie</option>
-                            <option>Orthopédie</option>
-                            <option>Frais chirurgicaux</option>
-                          </select>
-                        </div>
-                        <div
-                          style="
-                            width: 40%;
-                            margin-left: 34%;
-                            margin-top: -5.3%;
-                          "
-                        >
-                          <label
-                            style="
-                              color: #fc043a;
-                              font-size: medium;
-                              font-weight: bold;
-                            "
-                            class="col-sm-3 col-form-label"
-                            >Montant (TND)</label
-                          >
-                          <div>
-                            <input
-                              type="text"
-                              class="form-control"
-                              style="width: 190px; height: 30px"
-                            />
-                          </div>
-                          <button
-                            style="
-                              margin-left: 65%;
-                              margin-top: -8%;
-                              width: 40px;
-                              height: 40px;
-                            "
-                            class="add btn btn-icons btn-rounded btn-success todo-list-add-btn text-white me-0 pl-12p"
-                          >
-                            <i class="mdi mdi-plus"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
                     <div
                       style="
                         width: 80%;
@@ -724,19 +715,9 @@
                                 color: #fc043a;
                                 font-size: medium;
                                 border-top: 1px solid rgba(0, 0, 0, 0.25);
-                                width: 400px;
                               "
                             >
                               Montant (TND)
-                            </th>
-                            <th
-                              style="
-                                color: #fc043a;
-                                font-size: medium;
-                                border-top: 1px solid rgba(0, 0, 0, 0.25);
-                              "
-                            >
-                              Supprimer
                             </th>
                           </tr>
                         </thead>
@@ -753,16 +734,18 @@
                             <td>
                               <h7>300</h7>
                             </td>
+                          </tr>
+                          <tr>
                             <td>
-                              <button
-                                style="
-                                  font-size: 22px;
-                                  margin-left: 1.3%;
-                                  color: #fc043a;
-                                  border: none;
-                                "
-                                class="mdi mdi-window-close"
-                              ></button>
+                              <div
+                                class="form-check form-check-flat mt-0"
+                              ></div>
+                            </td>
+                            <td>
+                              <h7>Frais chirurgicaux</h7>
+                            </td>
+                            <td>
+                              <h7>300</h7>
                             </td>
                           </tr>
                           <tr>
@@ -777,17 +760,6 @@
                             <td>
                               <h7>400</h7>
                             </td>
-                            <td>
-                              <button
-                                style="
-                                  font-size: 22px;
-                                  margin-left: 1.3%;
-                                  color: #fc043a;
-                                  border: none;
-                                "
-                                class="mdi mdi-window-close"
-                              ></button>
-                            </td>
                           </tr>
                           <tr>
                             <td>
@@ -801,24 +773,13 @@
                             <td>
                               <h7>120</h7>
                             </td>
-                            <td>
-                              <button
-                                style="
-                                  font-size: 22px;
-                                  margin-left: 1.3%;
-                                  color: #fc043a;
-                                  border: none;
-                                "
-                                class="mdi mdi-window-close"
-                              ></button>
-                            </td>
                           </tr>
                         </tbody>
                       </table>
                       <h3
                         style="
                           margin-left: 1%;
-                          margin-top: 2%;
+                          margin-top: 3%;
                           margin-bottom: 1.5%;
                           color: #fc043a;
                           font-size: medium;
@@ -826,7 +787,7 @@
                         "
                         class="card-title card-title-dash"
                       >
-                        Récapitulation
+                        Recapitulation
                       </h3>
                     </div>
                   </div>
@@ -841,7 +802,7 @@
                     >
                       Montant global (TND)
                     </h6>
-                    <h6>820</h6>
+                    <h6 style="margin-bottom: 3%">1220</h6>
                     <h6
                       style="
                         color: #fc043a;
@@ -852,72 +813,40 @@
                     >
                       Prise en charge (TND)
                     </h6>
-                    <h6>220</h6>
+                    <h6>420</h6>
                   </div>
                   <hr style="width: 90%; margin-left: -1%" />
-                  <div style="padding-left: 65%">
-                    <button
-                      class="btn btn-success btn-lg text-white mb-0 me-0"
-                      style="margin-top: 3%"
-                      onclick="openValiderPopUp()"
-                    >
-                      <i class="mdi mdi-check-circle-outline"></i>Valider
-                    </button>
-                    <button
-                      class="btn btn-danger btn-lg text-white mb-0 me-0"
-                      style="margin-top: 3%"
-                      onclick="closeannulerPopUp()"
-                    >
-                      <i class="mdi mdi-block-helper"></i>Annuler
-                    </button>
-                  </div>
-                  <div class="validerPopUp" id="validerPopUp">
-                    <img src="./images/404-tick.png" />
-                    <h2
-                      style="
-                        font-size: 38px;
-                        font-weight: 500;
-                        margin: 30px 0 10px;
-                      "
-                    >
-                      Validation !
-                    </h2>
-                    <p>Votre prise en charge a été ajoutée</p>
-                    <a
-                      class="btn btn-success btn-lg text-white mb-0 me-0"
-                      href="./listPrestation.html"
-                      >Continuer</a
-                    >
-                  </div>
-                  <div class="annulerPopUp" id="annulerPopUp">
-                    <img src="./images/Cross_red_circle.svg.png" />
-                    <h2
-                      style="
-                        font-size: 38px;
-                        font-weight: 500;
-                        margin: 30px 0 10px;
-                      "
-                    >
-                      Annulation
-                    </h2>
-                    <p>Votre prise en charge a été annulée</p>
-                    <a
-                      class="btn btn-danger btn-lg text-white mb-0 me-0"
-                      href="./listPrestation.html"
-                      >Continuer</a
-                    >
-                  </div>
+                </div>
+                <div style="padding-left: 60%">
+                  <button
+                    class="btn btn-success btn-lg text-white mb-0 me-0"
+                    style="margin-top: 3%"
+                  >
+                    <i class="mdi mdi-check-circle-outline"></i>Valider
+                  </button>
+                  <button
+                    class="btn btn-danger btn-lg text-white mb-0 me-0"
+                    style="margin-top: 3%"
+                  >
+                    <i class="mdi mdi-block-helper"></i>Rejeter
+                  </button>
+                  <button
+                    class="btn btn-warning btn-lg text-white mb-0 me-0"
+                    style="margin-top: 3%"
+                  >
+                    <i class="mdi mdi-pencil"></i>Modifier
+                  </button>
                 </div>
               </div>
             </div>
-
-            <!-- partial -->
           </div>
-          <!-- main-panel ends -->
+          <!-- partial -->
         </div>
-        <!-- page-body-wrapper ends -->
+        <!-- main-panel ends -->
       </div>
+      <!-- page-body-wrapper ends -->
     </div>
+
     <!-- plugins:js -->
     <script src="vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
@@ -940,18 +869,5 @@
     <script src="js/Chart.roundedBarCharts.js"></script>
     <!-- End custom js for this page-->
     <!-- pop up -->
-    <script>
-      let popup = document.getElementById("validerPopUp");
-      let popupanu = document.getElementById("annulerPopUp");
-      function openValiderPopUp() {
-        popup.classList.add("open-validerPopUp");
-      }
-      function closeannulerPopUp() {
-        popupanu.classList.add("open-annulerPopUp");
-      }
-      function nopopup() {
-        popupanu.classList.remove("open-annulerPopUp");
-      }
-    </script>
   </body>
 </html>
